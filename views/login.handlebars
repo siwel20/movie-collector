@@ -1,0 +1,15 @@
+<div class="login-page-img">
+  <input type="radio" checked id="toggle--login" name="toggle" class="ghost" />
+  <input type="radio" id="toggle--signup" name="toggle" class="ghost" />
+
+  <form class="login-form form form--login framed">
+  <input autocomplete="" id="username-login" type="text" placeholder="Username" class="input" />
+  <section class="signup-section">
+    <input placeholder="Password" autocomplete="new-password" type="password" name="password" id="password">
+    <input id="login" type="submit" value="Login" class="input input--submit" />
+    
+    <label onclick="window.location.href='/signup';" type="click" for="toggle--signup" class="text text--small text--centered">New? <b>Sign up</b></label>
+  </form>
+
+  <script src="/javascript/login.js"></script>
+</div>

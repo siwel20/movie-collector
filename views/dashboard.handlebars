@@ -1,0 +1,85 @@
+<div class="video">
+<iframe width="635" height="390" src="https://www.youtube.com/embed/9YB0--9IDyU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+<section class="selection-media">
+  <form class="new-post-form-movie">
+      <h2 class="title-top dashboard-title">Add New Movie</h2>
+    <div class="media-input">
+      <label for="post-title">Movie Title</label>
+      <input type="text" class="post-title" type="text" id="post-title" name="post-title" />
+    </div>
+    <div>
+      <label for="post-url">Movie Cover Image URL</label>
+      <input type="text" class="post-title" id="post-url" name="post-url" />
+    </div>
+    <div>
+      <label for="post-url">Director</label>
+      <input type="text" class="post-title" id="post-director" name="post-director" />
+    </div>
+    <div>
+      <label for="post-url">Actors/Actresses</label>
+      <input type="text" class="post-title" id="post-actors" name="post-actors" />
+    </div>
+    <div class="save-delete-buttons">
+      <button type="submit" class="btn">Create</button>
+    </div>
+  </form>
+
+  <form class="new-post-form-book">
+  <h2 class="title-top dashboard-title">Add New Book</h2>
+    <div>
+      <label for="post-title">Book Title</label>
+      <input type="text" class="post-title" type="text" id="post-title" name="post-booktitle" />
+    </div>
+    <div>
+      <label for="post-url">Book Cover Image URL</label>
+      <input type="text" class="post-title" id="post-url" name="post-bookurl" />
+    </div>
+    <div>
+      <label for="post-url">Alternative Title</label>
+      <input type="text" class="post-title" id="post-director" name="post-alttitle" />
+    </div>
+    <div>
+      <label for="post-url">Author</label>
+      <input type="text" class="post-title" id="post-actors" name="post-author" />
+    </div>
+    <div class="save-delete-buttons">
+      <button type="submit" class="btn">Create</button>
+    </div>
+  </form>
+</section>
+
+<hr style="border: 4px solid blue;" />
+{{#if movies.length}}
+  <h2 class="title-top dashboard-title">Your Movies</h2>
+<section>
+  <ol class="movie-max">
+    <div class="movie-wrapper">
+    {{#each movies as |movie|}}
+    <li class="movie-spacing">
+      <a href="/dashboard/edit/movies/{{movie.id}}" class="edit-link">Edit</a>
+      {{> post-info movie}}
+    </li>
+    {{/each}}
+  </div>
+  </ol>
+</section>
+{{/if}}
+
+{{#if books.length}}
+  <h2 class="title-top dashboard-title">Your Books</h2>
+<section>
+  <ol class="movie-max">
+    <div class="movie-wrapper">
+    {{#each books as |book|}}
+    <li class="movie-spacing">
+      <a href="/dashboard/edit/books/{{book.id}}" class="edit-link">Edit</a>
+      {{> book-info book}}
+    </li>
+    {{/each}}
+  </div>
+  </ol>
+</section>
+{{/if}}
+
+<script src="/javascript/add-post.js"></script>

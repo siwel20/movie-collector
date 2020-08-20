@@ -1,0 +1,15 @@
+  <div class="card container">
+  {{#if post_url}}
+    <img src="{{post_url}}" width="300px" height="450">
+  {{/if}}
+  {{#if title}}
+    <h4 class="title-size">Title: <span class="bold-title">{{title}}</span></h4>
+    {{/if}}
+    {{#if director}}
+    <p class="info-size"><span class="labels">Directed By: </span>{{director}}</p>
+    {{/if}}
+    {{#if actors}}
+    <p class="info-size"><span class="labels">Actors/Actresses: </span>{{actors}}</p>
+    {{/if}}
+  </div>
+    <a class="comment-text" href="/movie/{{id}}">{{comments.length}} comment(s)</a>
